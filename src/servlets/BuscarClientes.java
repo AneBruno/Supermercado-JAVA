@@ -14,13 +14,13 @@ import logic.PersonaController;
  * Servlet implementation class EditClientes
  */
 @WebServlet("/EditClientes")
-public class EditClientes extends HttpServlet {
+public class BuscarClientes extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public EditClientes() {
+    public BuscarClientes() {  //cambie eso
         super();
         // TODO Auto-generated constructor stub
     }
@@ -44,6 +44,9 @@ public class EditClientes extends HttpServlet {
 		int id = Integer.parseInt(request.getParameter("id"));
 		per.setIdPersona(id);
 		per =ctrl.getById(per);
+		
+		
+		
 		
 		per=ctrl.editPersona(per);
 	}
