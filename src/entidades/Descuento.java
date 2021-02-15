@@ -17,14 +17,14 @@ public class Descuento {
 	public Date getFechaDctoFin() {
 		return fechaDctoFin;
 	}
-	public void setFechaDctoFin(Date fechaDctoFin) {
-		this.fechaDctoFin = fechaDctoFin;
+	public void setFechaDctoFin(java.util.Date fechaDctoFin) {
+		this.fechaDctoFin = (Date) fechaDctoFin;
 	}
 	public Date getFechaDctoInicio() {
 		return fechaDctoInicio;
 	}
-	public void setFechaDctoInicio(Date fechDctoInicio) {
-		this.fechaDctoInicio = fechDctoInicio;
+	public void setFechaDctoInicio(java.util.Date fechaDctoInicio) {
+		this.fechaDctoInicio = (Date) fechaDctoInicio;
 	}
 	public Double getPorcDcto() {
 		return porcDcto;
