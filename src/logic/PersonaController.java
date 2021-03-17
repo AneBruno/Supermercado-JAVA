@@ -7,6 +7,7 @@ import Data.*;
 import entidades.*;
 
 @SuppressWarnings("unused")
+
 public class PersonaController {
 	
 	private DataPersona dp;
@@ -14,7 +15,9 @@ public class PersonaController {
 	private DataCategoria dc;
 	
 	public PersonaController() {
+		
 		dp=new DataPersona();
+		
 	}
 
 	

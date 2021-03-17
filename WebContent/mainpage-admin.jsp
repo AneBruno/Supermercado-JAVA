@@ -8,14 +8,8 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Home</title>
-
- <!-- Bootstrap core CSS -->
   <link href="style/mainpage/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Custom styles for this template -->
   <link href="style/mainpage/modern-business.css" rel="stylesheet">
-  
-  
   <%Persona per = (Persona)session.getAttribute("usuario");%>
 </head>
 <body>

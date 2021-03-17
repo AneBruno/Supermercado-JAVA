@@ -16,7 +16,6 @@ public class DescuentoController {
 		dd=new DataDescuento();
 	}
 
-	
 	public LinkedList<Descuento> listarDescuentos() {
 		return dd.getAll();
 	}

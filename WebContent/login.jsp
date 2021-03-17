@@ -64,6 +64,8 @@
                   <label for="inputPassword">Contraseña</label>
                 </div>
 
+				<p>${message_def}</p>
+				<p>${message_sec}</p>
              
                 <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Ingresar</button>
                 <div class="text-center">

@@ -7,12 +7,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import entidades.Descuento;
+
 import entidades.Pedido;
-import entidades.Persona;
-import logic.DescuentoController;
+
 import logic.PedidoController;
-import logic.PersonaController;
+
 
 /**
  * Servlet implementation class BuscarPedido

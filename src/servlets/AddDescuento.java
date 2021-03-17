@@ -16,40 +16,29 @@ import javax.servlet.http.HttpServletResponse;
 import entidades.Descuento;
 import logic.DescuentoController;
 
-/**
- * Servlet implementation class AddDescuento
- */
 @SuppressWarnings("unused")
 @WebServlet("/AddDescuento")
+
 public class AddDescuento extends HttpServlet {
+	
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
+ 
     public AddDescuento() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-	//	doGet(request, response);
+		
 		Descuento d = new Descuento();
 		Descuento descuento= new Descuento();
-		//LinkedList<Descuento> descuentos = new LinkedList<Descuento>();
 		DescuentoController ctrl = new DescuentoController();
+		
+		try {
 		
 		String porc= request.getParameter("porc");
 		Double porcen= Double.parseDouble(porc);
@@ -64,13 +53,17 @@ public class AddDescuento extends HttpServlet {
 		d.setFechaDctoInicio(fecha_desde);
 		d.setFechaDctoFin(fecha_hasta);
 		descuento= ctrl.add(d);
-		//d.setFechaDctoInicio(fd);
 		
-		//descuentos= ctrl.listarDescuentos();
-
 		request.setAttribute("nuevoDesc", descuento);
-		//request.setAttribute("descuentos", descuentos);
 		request.getRequestDispatcher("ListDescuentos").forward(request, response);
+		
+		}
+		
+		catch (IllegalArgumentException iae)	
+		{
+			request.setAttribute("message_iae", "Ingrese correctamente el formato de la fecha (AÑO-MES-DIA), Respetar separacion con guiones");
+			request.getRequestDispatcher("crearDcto.jsp").forward(request, response);
+		}
 	}
 
 }

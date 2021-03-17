@@ -24,11 +24,6 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item ">
-            <a class="nav-link" href="mainpage-admin.jsp">Home
-              
-            </a>
-          </li>
           <li class="nav-item active">
             <a class="nav-link" href="categorias-admin.jsp">Categorías
             <span class="sr-only">(current)</span>
