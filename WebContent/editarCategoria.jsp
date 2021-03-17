@@ -49,8 +49,14 @@
 	            <a class="nav-link" href="ListEmpleados">Empleados</a>
 	             
           </li>
+           <li class="nav-item">
+              <a class="nav-link" href="ListProductos">Productos</a>
+          </li>
           <li class="nav-item">
              <a class="nav-link" href="ListPedidos">Pedidos</a>
+          </li>
+           <li class="nav-item ">
+            <a class="nav-link" href="ListProveedores">Proveedores</a>
           </li>
           <li class="nav-item">
              <form action="Inicio" method="get">
@@ -77,7 +83,7 @@
                
                 <div class="form-label-group">
                   <input type="text" name="descrip" id="inputDescrip" class="form-control" value=<%=cat.getDescCategoria()%> required >
-                  <label for="inputEmail">Descripción</label>
+                  <label for="inputDescrip">Descripción</label>
                 </div>
 
                

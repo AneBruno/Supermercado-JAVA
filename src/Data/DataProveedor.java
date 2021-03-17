@@ -49,20 +49,20 @@ public class DataProveedor {
 			return proveedores;
 		}
 
-	public void add(Proveedor p) { 
+	public Proveedor add(Proveedor p) { 
 		PreparedStatement stmt= null;
 		ResultSet keyResultSet=null;
 		try {
 			stmt=DbConnector.getInstancia().getConn().
 					prepareStatement(
-							"insert into proveedor(idProveedor, telefono, email, razonSocial, fechaBaja) values(?,?,?,?,?)",
+							"insert into proveedor( telefono, email, razonSocial, fechaBaja) values(?,?,?,?)",
 							PreparedStatement.RETURN_GENERATED_KEYS
 							);
-			stmt.setInt(1, p.getIdProveedor());
-			stmt.setString(2, p.getTelefono());
-			stmt.setString(3, p.getMail());
-			stmt.setString(4, p.getRazonSocial());
-			stmt.setDate(5, p.getFechaBaja());
+	
+			stmt.setString(1, p.getTelefono());
+			stmt.setString(2, p.getMail());
+			stmt.setString(3, p.getRazonSocial());
+			stmt.setDate(4,p.getFechaBaja());
 						
 			stmt.executeUpdate();
 			
@@ -83,7 +83,7 @@ public class DataProveedor {
             	e.printStackTrace();
             }
 		}
-		
+		return p;
     }
 	
 	public Proveedor editProveedor (Proveedor p) {
@@ -92,7 +92,7 @@ public class DataProveedor {
 		try {
 			stmt=DbConnector.getInstancia().getConn().
 					prepareStatement(
-							"UPDATE `java`.`proveedor` SET `telefono` = ?,`email` = ?,`razonSocial` = ?, `fechaBaja` = ? WHERE (`idProveedor` = ?)", PreparedStatement.RETURN_GENERATED_KEYS);
+							"UPDATE `tp_java`.`proveedor` SET `telefono` = ?,`email` = ?,`razonSocial` = ?, `fechaBaja` = ? WHERE (`idProveedor` = ?)", PreparedStatement.RETURN_GENERATED_KEYS);
 			
 			
 			stmt.setString(1, p.getTelefono());
@@ -122,7 +122,7 @@ public class DataProveedor {
 	return p;
 	}
 
-	public Proveedor deleteProveedor(Proveedor p) {
+	public void deleteProveedor(Proveedor p) {
 			
 			PreparedStatement stmt= null;
 			ResultSet keyResultSet=null;
@@ -149,8 +149,42 @@ public class DataProveedor {
 	        	e.printStackTrace();
 	        }
 		}
-		return p;
+			
 		}
 
-	
+	public Proveedor getById(Proveedor prov) {
+		Proveedor p=null;
+		PreparedStatement stmt=null;
+		ResultSet rs=null;
+		try {
+			stmt=DbConnector.getInstancia().getConn().prepareStatement(
+					"select idProveedor, telefono, email, razonSocial, fechaBaja from proveedor where idProveedor=?"
+					);
+			stmt.setInt(1, prov.getIdProveedor());
+			
+			rs=stmt.executeQuery();
+			if(rs!=null && rs.next()) {
+				p=new Proveedor();
+				p.setIdProveedor(rs.getInt("idProveedor"));
+				p.setMail(rs.getString("email"));
+				p.setTelefono(rs.getString("telefono"));
+				p.setRazonSocial(rs.getString("razonSocial"));
+				p.setFechaBaja(rs.getDate("fechaBaja"));
+
+		
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				if(rs!=null) {rs.close();}
+				if(stmt!=null) {stmt.close();}
+				DbConnector.getInstancia().releaseConn();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		
+		return p;
+}	
 }

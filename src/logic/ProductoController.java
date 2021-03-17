@@ -35,6 +35,24 @@ private DataProducto dp;
 	public void addProducto(Producto p) {
 		 dp.add(p);
 	}
+	
+	public LinkedList<Producto> listarByCategoria (Categoria cat){
+		return dp.getByCategoria(cat);
+	}
+	
+	public LinkedList<Producto> listarMenosMas (){
+		return dp.getMenosMas();
+	}
+	
+	public LinkedList<Producto> listarMasMenos (){
+		return dp.getMasMenos();
+	}
+	
+	public LinkedList<Producto> listarByDesc (String desc){
+		return dp.getByDesc(desc);
+	}
+	
+	
 }
 
 

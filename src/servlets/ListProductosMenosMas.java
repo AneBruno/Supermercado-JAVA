@@ -9,64 +9,54 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-<<<<<<< HEAD
+import entidades.Categoria;
+import entidades.Producto;
+import logic.CategoriaController;
 import logic.ProductoController;
-=======
-import entidades.*;
-import logic.*;
->>>>>>> refs/remotes/origin/master
 
-import entidades.*;
-import logic.*;
-
-@WebServlet("/ListProductos")
-
-public class ListProductos extends HttpServlet {
-	
-	
+/**
+ * Servlet implementation class ListProductosMenosMas
+ */
+@WebServlet("/ListProductosMenosMas")
+public class ListProductosMenosMas extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-    public ListProductos() {
-    	
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public ListProductosMenosMas() {
         super();
+        // TODO Auto-generated constructor stub
     }
 
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+		// TODO Auto-generated method stub
+		//response.getWriter().append("Served at: ").append(request.getContextPath());
 		doPost(request, response);
 	}
 
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-<<<<<<< HEAD
-=======
 		// TODO Auto-generated method stub
-		// doGet(request, response);
-	
+		//doGet(request, response);
 		ProductoController ctrl= new ProductoController();
 		CategoriaController ctrlCat= new CategoriaController();
 		
 		LinkedList<Producto> productos= new LinkedList<Producto>();
 		LinkedList<Categoria> categorias= new LinkedList<Categoria>();
 		
-		productos=ctrl.listarProductos();
+		productos=ctrl.listarMenosMas();
 		categorias= ctrlCat.listarCategorias();
 		
 		request.setAttribute("productos", productos);
 		request.setAttribute("categorias", categorias);
 		
-        request.getRequestDispatcher("listarProductos.jsp").forward(request, response);
->>>>>>> refs/remotes/origin/master
-
-		ProductoController ctrl= new ProductoController();
-		CategoriaController ctrlCat= new CategoriaController();
-		
-		LinkedList<Producto> productos= new LinkedList<Producto>();
-		LinkedList<Categoria> categorias= new LinkedList<Categoria>();
-		
-		productos=ctrl.listarProductos();
-		categorias= ctrlCat.listarCategorias();
-		
-		request.setAttribute("productos", productos);
-		request.setAttribute("categorias", categorias);
         request.getRequestDispatcher("listarProductos.jsp").forward(request, response);
 	}
+
 }

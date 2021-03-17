@@ -28,8 +28,14 @@ public class AddDescuento extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+<<<<<<< HEAD
 
 		response.getWriter().append("Served at: ").append(request.getContextPath());
+=======
+		// TODO Auto-generated method stub
+		// response.getWriter().append("Served at: ").append(request.getContextPath());
+		doPost(request, response);
+>>>>>>> refs/remotes/origin/master
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

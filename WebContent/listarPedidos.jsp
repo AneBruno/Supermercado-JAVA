@@ -62,9 +62,15 @@
           <li class="nav-item">
              <a class="nav-link" href="ListEmpleados">Empleados</a>
           </li>
+          <li class="nav-item">
+              <a class="nav-link" href="ListProductos">Productos</a>
+          </li>
           <li class="nav-item active">
             <a class="nav-link" href="ListPedidos">Pedidos</a>
              <span class="sr-only">(current)</span>
+              <li class="nav-item ">
+            <a class="nav-link" href="ListProveedores">Proveedores</a>
+          </li>
           </li>
           <li class="nav-item">
              <a class="nav-link" href="">Cerrar Sesión</a>

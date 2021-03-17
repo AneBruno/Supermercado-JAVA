@@ -34,8 +34,15 @@
                      <li class="nav-item">
              <a class="nav-link" href="ListEmpleados">Empleados</a>
           </li>
+           <li class="nav-item">
+              <a class="nav-link" href="ListProductos">Productos</a>
+          </li>
           <li class="nav-item">
              <a class="nav-link" href="ListPedidos">Pedidos</a>
+          </li>
+          </li>
+           <li class="nav-item ">
+            <a class="nav-link" href="ListProveedores">Proveedores</a>
           </li>
           <li class="nav-item">
              <form action="Inicio" method="get">
@@ -59,18 +66,18 @@
   <h3 class="login-heading mb-4 text-center">Nuevo Descuento</h3>
   <form action="AddDescuento" method="post">
   				<div class="form-label-group">
-                  <input type="text" name="porc" id="inputPorc" class="form-control" placeholder="Porcentaje" required >
-                  <label for="inputEmail">Porcentaje</label>
+                  <input type="text" name="porc" id="porc" class="form-control" placeholder="Porcentaje" required >
+                  <label for="porc">Porcentaje</label>
                 </div>
 
                 <div class="form-label-group">
-                  <input type="text" name="desde" id="inputDesde" class="form-control" placeholder="Desde" required >
-                  <label for="inputPassword">Desde</label>
+                  <input type="text" name="desde" id="desde" class="form-control" placeholder="Desde" required >
+                  <label for="desde">Desde</label>
                 </div>
 				
                 <div class="form-label-group">
-                  <input type="text" name="hasta" id="inputHasta" class="form-control" placeholder="Hasta" >
-                  <label for="inputPassword">Hasta</label>
+                  <input type="text" name="hasta" id="hasta" class="form-control" placeholder="Hasta" >
+                  <label for="hasta">Hasta</label>
                 </div>
                 
                 <p>${message_iae}</p>

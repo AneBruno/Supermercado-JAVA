@@ -49,6 +49,9 @@
           <li class="nav-item">
              <a class="nav-link" href="ListPedidos">Pedidos</a>
           </li>
+           <li class="nav-item ">
+            <a class="nav-link" href="ListProveedores">Proveedores</a>
+          </li>
           <li class="nav-item">
              <form action="Inicio" method="get">
               	<a class="nav-link" href="">Cerrar Sesión</a>
@@ -72,14 +75,18 @@
               <form action="AddCategoria" method="post">
                
                 <div class="form-label-group">
-                  <input type="text" name="descrip" id="inputDescrip" class="form-control" placeholder="Descripcion" required >
-                  <label for="inputEmail">Descripcion</label>
+                  <input type="text" name="descrip" id="descrip" class="form-control" placeholder="Descripcion" required >
+                  <label for="descrip">Descripcion</label>
                 </div>
 
                 
  
                 <form action="AddCategoria" method="post">
+<<<<<<< HEAD
                 <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit" onclick="return confirm('Se agregará una nueva categoria. Desea confirmar?')">Agregar</button>
+=======
+                <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit" onclick="return confirm('Se agregará una nueva categoría. Desea confirmar?')">Agregar</button>
+>>>>>>> refs/remotes/origin/master
                 </form>
                 
       	     </form>
