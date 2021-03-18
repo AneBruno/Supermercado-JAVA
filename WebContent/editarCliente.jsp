@@ -9,21 +9,14 @@
 <meta charset="ISO-8859-1">
 <title>Editar cliente</title>
 
-<!-- Bootstrap core CSS -->
   <link href="style/mainpage/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Custom styles for this template -->
   <link href="style/mainpage/modern-business.css" rel="stylesheet">
+  <link href="style/login/login.css" rel="stylesheet">
   
-   <!--  <link href="style/login/login.css" rel="stylesheet"> -->
-    
-   <link href="style/login/login.css" rel="stylesheet">
-  
-<% Persona per = (Persona)request.getAttribute("clienteEditar");
-%> 
+<% Persona per = (Persona)request.getAttribute("clienteEditar");%> 
 </head>
 <body>
-<!-- Navigation -->
+
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
       <a class="navbar-brand" href="mainpage-admin.jsp">Supermercado</a>
@@ -32,11 +25,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item ">
-            <a class="nav-link" href="mainpage-admin.jsp">Home
-              
-            </a>
-          </li>
+
           <li class="nav-item">
             <a class="nav-link" href="ListCategorias">Categorías</a>
           </li>
@@ -92,14 +81,14 @@
                   <input type="text" name="surname" id="surname" class="form-control" value=<%=per.getApellido()%> required>
                   <label for="surname">Apellido</label>
                 </div>
-
-				
-                <div class="form-label-group">
-                  <input type="text" name="tipoDoc" id="tipoDoc" class="form-control" value=<%=per.getTipoDoc() %> required>
-                  <label for="tipoDoc">Tipo Documento</label>
-                </div>
-                
-                             
+			
+          		<label for="tipoDoc">Elegir Tipo Doc:</label>
+  				<select id="inputTipoDoc" name="tipoDoc">
+   				<option value="DNI">DNI</option>
+  				<option value="Libreta Civica">Libreta Cívica</option>
+  				<option value="Libreta de Enrolamiento">Libreta de Enrolamiento</option>
+  				</select>	
+                                       
                 <div class="form-label-group">
                   <input type="text" name="nroDoc" id="nroDoc" class="form-control" value=<%=per.getNroDoc() %> required>
                   <label for="nroDoc">Nro Documento</label>

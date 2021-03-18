@@ -7,12 +7,8 @@
 
 <title>Bienvenido</title>
 
-  <!-- Bootstrap core CSS -->
   <link href="style/mainpage/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Custom styles for this template -->
   <link href="style/mainpage/modern-business.css" rel="stylesheet">
-  
   
   <style>
 

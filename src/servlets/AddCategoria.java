@@ -24,9 +24,9 @@ public class AddCategoria extends HttpServlet {
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Categoria cat= new Categoria();
-		CategoriaController ctrl= new CategoriaController();
 		
+		Categoria cat= new Categoria();
+		CategoriaController ctrl= new CategoriaController();		
 		String desc_categoria = request.getParameter("descrip");
 				
 		cat.setDescCategoria(desc_categoria);
@@ -37,7 +37,6 @@ public class AddCategoria extends HttpServlet {
 		}
 	
 			//cartel de q esta mal
-		
 	}
 
 

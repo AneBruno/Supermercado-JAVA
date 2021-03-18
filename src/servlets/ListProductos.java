@@ -9,12 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-<<<<<<< HEAD
+
 import logic.ProductoController;
-=======
-import entidades.*;
-import logic.*;
->>>>>>> refs/remotes/origin/master
 
 import entidades.*;
 import logic.*;
@@ -36,25 +32,6 @@ public class ListProductos extends HttpServlet {
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-<<<<<<< HEAD
-=======
-		// TODO Auto-generated method stub
-		// doGet(request, response);
-	
-		ProductoController ctrl= new ProductoController();
-		CategoriaController ctrlCat= new CategoriaController();
-		
-		LinkedList<Producto> productos= new LinkedList<Producto>();
-		LinkedList<Categoria> categorias= new LinkedList<Categoria>();
-		
-		productos=ctrl.listarProductos();
-		categorias= ctrlCat.listarCategorias();
-		
-		request.setAttribute("productos", productos);
-		request.setAttribute("categorias", categorias);
-		
-        request.getRequestDispatcher("listarProductos.jsp").forward(request, response);
->>>>>>> refs/remotes/origin/master
 
 		ProductoController ctrl= new ProductoController();
 		CategoriaController ctrlCat= new CategoriaController();
@@ -66,7 +43,7 @@ public class ListProductos extends HttpServlet {
 		categorias= ctrlCat.listarCategorias();
 		
 		request.setAttribute("productos", productos);
-		request.setAttribute("categorias", categorias);
+		request.setAttribute("categorias", categorias);		
         request.getRequestDispatcher("listarProductos.jsp").forward(request, response);
 	}
 }

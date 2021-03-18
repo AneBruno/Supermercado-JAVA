@@ -11,13 +11,11 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.LinkedList;
  
-
-
 import Data.*;
 import entidades.*;
 
-
 @SuppressWarnings("unused")
+
 public class DataCategoria {
 
 	public LinkedList<Categoria> getAll(){

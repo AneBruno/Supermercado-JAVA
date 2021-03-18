@@ -10,8 +10,8 @@ import Data.*;
 import entidades.*;
 import logic.*;
 
-
 @SuppressWarnings("unused")
+
 public class DataProducto {
 	
 	//no usamamos este metodo

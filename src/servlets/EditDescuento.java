@@ -4,7 +4,6 @@ package servlets;
 import java.io.IOException;
 import java.sql.Date;
 
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -19,8 +18,7 @@ import logic.*;
 public class EditDescuento extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
-    public EditDescuento() {
-    	
+    public EditDescuento() {    	
         super();
     }
 
@@ -30,9 +28,6 @@ public class EditDescuento extends HttpServlet {
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		// TODO Auto-generated method stub
-		// doGet(request, response);  que es esto ??
 	
 		DescuentoController ctrl= new DescuentoController();
 		Descuento dcto= new Descuento();

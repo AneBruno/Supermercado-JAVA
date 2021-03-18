@@ -23,9 +23,8 @@
 </head>
 
 <body>
-<!-- Page Content -->
+
   <div class="container">
- <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
       <a class="navbar-brand" href="mainpage-admin.jsp">Supermercado</a>
@@ -34,11 +33,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item ">
-            <a class="nav-link" href="mainpage-admin.jsp">Home
-              
-            </a>
-          </li>
+ 
           <li class="nav-item">
             <a class="nav-link" href="ListCategorias">Categorías</a>
           </li>

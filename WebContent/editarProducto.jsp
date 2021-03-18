@@ -9,21 +9,15 @@
 <meta charset="ISO-8859-1">
 <title>Editar producto</title>
 
-<!-- Bootstrap core CSS -->
   <link href="style/mainpage/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Custom styles for this template -->
   <link href="style/mainpage/modern-business.css" rel="stylesheet">
+  <link href="style/login/login.css" rel="stylesheet">
   
-   <!--  <link href="style/login/login.css" rel="stylesheet"> -->
-    
-   <link href="style/login/login.css" rel="stylesheet">
-  
-<% Producto prod = (Producto)request.getAttribute("productoEditar");
-%> 
+<% Producto prod = (Producto)request.getAttribute("productoEditar");%> 
+
 </head>
 <body>
-<!-- Navigation -->
+
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
       <a class="navbar-brand" href="mainpage-admin.jsp">Supermercado</a>
@@ -32,11 +26,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item ">
-            <a class="nav-link" href="mainpage-admin.jsp">Home
-              
-            </a>
-          </li>
+
           <li class="nav-item">
             <a class="nav-link" href="ListCategorias">Categorías</a>
           </li>
@@ -114,8 +104,7 @@
                 </div>
                 
                 	<button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit" onclick="return confirm('Se editará el producto. Desea confirmar?')">Guardar cambios</button>
-                
-         
+                         
               </form>
             </div>
           </div>
@@ -124,7 +113,6 @@
     </div>
   </div>
 </div>
-
 
 </body>
 </html>

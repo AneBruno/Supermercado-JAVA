@@ -30,7 +30,6 @@ public class ListClientes extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		PersonaController ctrl= new PersonaController();
-		//LinkedList<Persona> personas= new LinkedList<Persona>();
 		LinkedList<Persona> clientes= new LinkedList<Persona>();
 		clientes=ctrl.listarClientes();
 		//request.getAttribute("usuario");

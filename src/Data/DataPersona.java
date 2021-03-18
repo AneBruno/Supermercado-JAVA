@@ -16,8 +16,8 @@ import java.util.LinkedList;
 import Data.*;
 import entidades.*;
 
-
 @SuppressWarnings("unused")
+
 public class DataPersona {
 
 	public LinkedList<Persona> getAll(){
